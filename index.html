@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leong Li</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
+<!-- search google for "font awesome 4 cdn"for font and icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" type="text/css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/Li-3.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#about">ABOUT ME</a></li>
+                    <li><a href="#proj">PROJECTS</a></li>
+                    <li><a href="#exp">EXPERIENCE</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+        <div class="text-box">
+            <p id="top">Hi, my name is</p>
+            <h1>Leong Li</h1>
+            <h3>Computer Science Student</h3>
+            <p>Let's build something great.</p>
+            <a href="Resume.pdf" class="btn">Résumé</a>
+        </div>        
+        <a id="top-arrow" href="#">⬆</a>
+    </section>
+    
+    <section class="about-me" id="about">
+        <h1>Education</h1>
+        <div class="edu">
+            <div class="text">
+                <h2>Bachelor of Science (Hons) Computer Science</h2>
+                <h4>York University</h4>
+                <p>Data Structures & Algorithms, Software Design, Database Systems, User Interfaces, Machine Learning, Computer Network Protols</p>
+            </div>
+            <img src="images/Logo_York_University.svg.png">
+        </div>
+        <div class="berg"></div>
+        <p>Lassonde School of Engineering @ York University</p>
+        <br><br>
+        <h1>Skills</h1>
+        <h3>Front End</h3>
+        <div class="skills-links">
+            <a href=""><img src="images/html.png" alt="HTML5"></a>
+            <a href=""><img src="images/css.png" alt="CSS3"></a>
+            <a href=""><img src="images/JavaScript-logo.png" alt="JavaScript"></a>
+            <a href=""><img src="images/react.png" alt="React"></a>
+        </div>
+        <h3>Back End</h3>
+        <div class="skills-links">
+            <a href="https://www.java.com/en/"><img src="images/java.png" alt="Java"></a>
+            <a href=""><img src="images/python.png" alt="Python"></a>
+            <a href=""><img src="images/c.png" alt="C"></a>
+            <a href=""><img src="images/mySql.png" alt="mySQL"></a>
+            <a href=""><img src="images/risc-v.png" alt="RISC-V"></a>
+        </div>
+        <h3>Developmental Tools</h3>
+        <div class="skills-links">
+            <a href=""><img src="images/github.png" alt="GitHub"></a>
+            <a href=""><img src="images/UML_logo.svg.png" alt="UML"></a>
+            <a href=""><img src="images/linux.png" alt="Linux"></a>
+            <a href=""><img src="images/windows.png" alt="Windows"></a>
+            <a href=""><img src="images/msoffice.png" alt="MS Office"></a>
+        </div>
+                        
+    </section>
+    <section class="projects" id="proj">
+        <h1>Projects</h1>
+        <div class="row">
+            <div class="projects-col">
+                <img src="images/studentregistration.jpg">
+                <h2>Student Database</h2>
+                <p>Semester-long project on a client-server based application, built using <strong>Java</strong> and <strong>mySQL</strong>.
+                    This app uses Java's GUI for the front end, and enables client to interact with the student database.
+                    Main features include registration of students, accessing & modifying grades, 
+                    calculating grades needed & final grade, and generating different table views.
+                </p>
+            </div>
+            <div class="projects-col">
+                <img src="images/todoapp.jpg" width="85%">
+                <h2>Productivity App</h2>
+                <p>Developed at Hibernation Hacks hosted by MLH Hacks. Worked in a team of student colleagues to 
+                    design and implement a Model View Controller based App using <strong>Java</strong>. Main features of this app are To-do List Trackers,
+                    Pomodoro Timers, & Calendars.
+                </p>
+                
+            </div>
+            <div class="projects-col">
+                <img src="images/evergreen.jpg" width="70%">
+                <h2>evergreen.co</h2>
+                <p>A website based on my parent's previous restaurant business, built using <strong>React.</strong>
+                    This website can be accessed <a href="https://google.ca">here</a>. You can find the menu, history and reviews 
+                    extracted from google reviews.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="experience" id="exp">
+        <h1>Experience</h1>
+        <div class="edu">
+            <div class="text">
+                <h2>Warehouse Associate</h2>
+                <h4>Karl W. Richter | 2022-2022</h4>
+                <p>
+                    <ul>
+                        <li>Recovered additional stock from customer returns with sorting and inspecting each item.</li>
+                        <li>Experience in data entry from processing returned items into warehouse inventory database.</li>
+                        <li>Increased rate at orders packed by minimizing quantity errors through inventory count and order picking</li>
+                    </ul>
+                </p>
+            </div>
+                <img src="images/kwr.png" alt="image 1">
+        </div>
+        <div class="edu">
+            <div class="text">
+                <h2>Food Service Retail</h2>
+                <h4>Compass Group Canada | 2018-2022</h4>
+                <p>
+                    <ul>
+                        <li>Improved overall customer feedback while delivering quality customer service at a faced paced environment.</li>
+                        <li>Reduced new employee training costs by sufficient hands-on training and trainer guidelines.</li>
+                    </ul>
+                </p>
+            </div>
+                <img src="images/compass.jpeg" alt="image 2">
+        </div>
+    </div>
+    
+
+    <section class="footer" id="contact">
+        <h1>Contact</h1>
+        <p>Always seeking to build new connections!</p>
+        <div class="contact-links">
+            <div class="contact-links-item">
+                <img src="https://t4.ftcdn.net/jpg/04/76/40/09/360_F_476400933_A4gKwXtlgQFslfSuDvbV35eQcBIDlYjw.jpg" alt="">
+                <a>leong.li@hotmail.com</a>
+            </div>
+            <div class="contact-links-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="">
+                <a href="https://linkedin.com/in/leong-li-502/">LinkedIn</a>
+            </div>
+            <div class="contact-links-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
+                <a href="https:/github.com/leongli">GitHub</a>
+            </div>
+        </div>
+        <br><br>
+        <p>made by Leong Li using HTML & CSS</p>
+    </section>
+    <!-- Javascript for toggle menu-->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right="0";
+    }
+    function hideMenu(){
+        navLinks.style.right="-200px";
+    }
+    let arrow = document.getElementById("top-arrow");
+
+    window.onscroll = function() {
+        if (document.documentElement.scrollTop > 20) {
+            arrow.style.display = "block";
+        } else {
+            arrow.style.display = "none";
+        }
+    };
+    arrow.addEventListener("click", function() {
+    document.documentElement.scrollTop = 0;
+});
+
+
+</script>
+
+</body>
+
+
+</html>
