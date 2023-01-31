@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 h1{
     font-size: 36px;
@@ -13,14 +14,15 @@ h3{
 }
 .header{
     min-height: 100vh;
-    width: 100%;
-    background-image: 
+    width: 100vw;
+    /* background-image: 
         url(images/m2.png);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     background-color: #222831;
-    background-size: 60vh;
+    /* background-size: 60vh;
     background-position: 80% 50%;
-    position: relative;
+    position: relative; */
+
 }
 nav{
     display: flex;
@@ -62,42 +64,47 @@ nav img{
     width: 100%;
 }
 .text-box{
-    width: 90%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 13vw;
+    padding-top: 6vw;
+}
+.container{
+    width: 100%;
+    display: flex;
     position: absolute;
-    top: 40%;
-    bottom: 50%;
     left: 50%;
-    right: 50%;
+    top: 50%;
     transform: translate(-50%,-50%);
-    text-align: left;
-    padding-left: 10%;
+}
+.container img{
+    width: 25vw;
 }
 .text-box h1{
-    font-size: 130px;
     color: #A5C9CA;
+    font-size: clamp(50px, 8vw, 130px);
+    text-align: left;
 }
 .text-box h3{
     text-align: left;
-    font-size: 35px;
+    font-size: clamp(15px, 4vw, 35px);
     color: #395B64;
 }
 .text-box p{
-    margin: 10px 0px 40px;
-    padding-left: 0px;
-    font-size: 18px;
+    text-align: left;
+    font-size: clamp(10px, 2vw, 18px);
     color: #EEEEEE;
+    padding-top: 8px;
 }
-
 .btn{
-    
-    display: inline-block;
-    text-decoration: none;
+    margin-top: 30px;
     color: #EEEEEE;
     border: 1px solid #EEEEEE;
     padding: 12px 34px;
     font-size: 18px;
     background: transparent;
-    position: relative;
+    width: min-content;
     cursor: pointer;    
 }
 .bth:hover{
@@ -108,9 +115,20 @@ nav img{
 nav .fa-solid{
     display: none;
 }
-@media(max-width: 700px){
-    .text-box h1{
-        font-size: 20px;
+@media only screen and (max-width: 600px) {
+    .text-box{
+        width: 100%;
+        padding-top: 80%;
+    }
+    .container{
+        height: 100%;
+        flex-direction: column;
+    }
+    .container img{
+        align-self: center;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        width: 50vw;
     }
     .nav-links ul li{
         display: block;
@@ -155,12 +173,9 @@ nav .fa-solid{
     text-align: center;
     padding-top: 100px;
     background-color: #E4F9F5;
+    width: 100%;
 }
 
-
-#top{
-    margin: 0 0 0 0;
-}
 
 .row{
     margin: 5%;
@@ -230,6 +245,7 @@ p, li{
     padding: 120px 0px;
     background-color: #222831;
     color: white;
+    width: 100%;
 }
 .projects a{
     color: white;
@@ -250,7 +266,8 @@ p, li{
 }
 .experience{
     background-color: #E4F9F5;
-    padding: 100px 0px
+    padding: 100px 0px;
+    width: 100%;
 }
 .experience h1{
     text-align: center;
