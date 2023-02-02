@@ -5,12 +5,21 @@
     overflow-x: hidden;
 }
 h1{
-    font-size: 36px;
+    font-size: clamp(24px,8vw, 45px);
     font-weight: 500;
 }
+h2{
+    font-size: clamp(20px,3vw, 35px);
+}
 h3{
-    font-size: 20px;
+    font-size: clamp(19px,2vw, 30px);
     font-weight: 300;
+}
+h4{
+    font-size: clamp(18px,2vw, 25px);
+}
+p{
+    font-size: clamp(16px,1vw, 18px);
 }
 .header{
     min-height: 100vh;
@@ -18,12 +27,6 @@ h3{
     background-image: 
         url(images/wp2757874-wallpaper-gif.gif);
     background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #222831;
-    /* background-size: 60vh;
-    background-position: 80% 50%;
-    position: relative; */
-
 }
 nav{
     display: flex;
@@ -32,7 +35,6 @@ nav{
     align-items: center;
 }
 nav img{
-    /* width: 150px; */
     height: 50px;
     width: 50px;
 }
@@ -64,13 +66,6 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 }
-.text-box{
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 13vw;
-    padding-top: 6vw;
-}
 .container{
     width: 100%;
     display: flex;
@@ -82,6 +77,13 @@ nav img{
 .container img{
     width: 25vw;
     height: 25vw;
+}
+.text-box{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 13vw;
+    padding-top: 6vw;
 }
 .text-box h1{
     color: #e77c7a;
@@ -104,42 +106,54 @@ nav img{
     color: #d5373d;
     border: 1px solid #d5373d;
     padding: 12px 34px;
-    font-size: 18px;
+    font-size: clamp(10px, 2vw, 18px);
     background: transparent;
     width: min-content;
     cursor: pointer;    
 }
-.bth:hover{
-    border: 1px solid orange;
-    background-color: orange;
+.btn:hover{
+    border: 1px solid #802125;
+    background-color: #802125;
+    color: #EEEEEE;
     transition: 1s;
     /* more colors at https://imagecolorpicker.com/color-code/d5373d */
 }
 nav .fa-solid{
     display: none;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .text-box{
         width: 100%;
-        padding-top: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding-top: 0;
     }
     .container{
         height: 100%;
         flex-direction: column;
     }
     .container img{
-        align-self: center;
-        padding-top: 10%;
-        padding-bottom: 10%;
-        width: 50vw;
-        height: 50vw;
+        position: fixed;
+        top: 50vh;
+        left: 50%;
+        transform: translate(-50%,15vh);
+        width: 40vw;
+        height: 40vw;
+        min-width: 200px;
+        min-height: 200px;
+    }
+    .btn{
+        padding: 2% 6%;
+        margin-top: 3%;
     }
     .nav-links ul li{
         display: block;
     }
     .nav-links{
         position: fixed;
-        background-color: orange;
+        background-color: #802125;
         height: 100vh;
         width: 200px;
         top: 0;
@@ -154,10 +168,18 @@ nav .fa-solid{
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
+        z-index: 999;
     }
     .nav-links ul{
         padding: 30px;
     }
+    .edu img{
+        max-width: 27vw;
+        max-height: 10vw;
+        min-width: 100px;
+        min-height: 38px;
+    }
+
 }
 #top-arrow {
     position: fixed;
@@ -172,15 +194,59 @@ nav .fa-solid{
     padding: 0px 3px;
 }
 
-
-.about-me{
+.education{
+    height: 50%;
+    background-image: linear-gradient(rgba(29, 29, 38, 0.7),rgba(29, 29, 38, 0.7)),url(images/berg.jpg);
+    background-size: cover;
     text-align: center;
-    padding-top: 100px;
-    background-color: #E4F9F5;
-    width: 100%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    color :#e8e8e9;
+    background-position: center;
+}
+.edu{
+    display: flex;
+    height: 100%;
+    width: auto;
+    flex: 1;
+    padding: 1% 13%;
+}
+.edu-text{
+    text-align: left;
+    width: 60%;
+    flex-direction: column;
+}
+.edu img{
+    width: 416px;
+    height: 150px;
+    justify-content: flex-end;
+    background-color: #e8e8e9;
+    border-radius: 20px;
 }
 
 
+.skills{
+    text-align: center;
+    padding: 7% 4%;
+    background-color: #212332; 
+    color: #b22022;
+    width: auto;
+}
+.skills-links{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.skills-links a{
+    text-align: center;
+    margin: 2vw;
+}
+.skills-links img{
+    max-width: 100px;
+    width: 8vw;
+    min-width: 40px;
+}
 .row{
     margin: 5%;
     display: flex;
@@ -209,40 +275,10 @@ nav .fa-solid{
     }
 }
 
-.edu{
-    display: flex;
-    flex: 1;
-    width: 80%;
-    padding-left: 10%;
-}
-p, li{
-    font-size: 20px;
-    font-weight: 300;
-}
-.text{
-    margin-top: 30px;
-    text-align: left;
-    margin-left: 100px;
-}
-.edu img{
-    margin-left: auto;
-    width: 30%;
-    margin-right: 100px;
-}
-.skills-links{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-.skills-links a{
-    width: 10%;
-    text-align: center;
-    margin: 30px;
-}
-.skills-links img{
-    width: 60%;
-}
+
+
+
+
 .projects{
     margin: auto;
     text-align: center;
