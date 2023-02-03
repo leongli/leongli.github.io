@@ -180,6 +180,13 @@ nav .fa-solid{
         min-height: 38px;
     }
 
+    .projects-row{
+        flex-direction: column;
+    }
+    .contact-links{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 #top-arrow {
     position: fixed;
@@ -199,10 +206,10 @@ nav .fa-solid{
     background-image: linear-gradient(rgba(29, 29, 38, 0.7),rgba(29, 29, 38, 0.7)),url(images/berg.jpg);
     background-size: cover;
     text-align: center;
-    padding-top: 15%;
-    padding-bottom: 15%;
+    padding: 15% 0%;
     color :#e8e8e9;
     background-position: center;
+    margin: auto;
 }
 .edu{
     display: flex;
@@ -210,6 +217,7 @@ nav .fa-solid{
     width: auto;
     flex: 1;
     padding: 1% 13%;
+    justify-content: space-between;
 }
 .edu-text{
     text-align: left;
@@ -219,7 +227,6 @@ nav .fa-solid{
 .edu img{
     width: 416px;
     height: 150px;
-    justify-content: flex-end;
     background-color: #e8e8e9;
     border-radius: 20px;
 }
@@ -228,9 +235,10 @@ nav .fa-solid{
 .skills{
     text-align: center;
     padding: 7% 4%;
-    background-color: #212332; 
-    color: #b22022;
+    background-color: #181820; 
+    color: #e77c7a;
     width: auto;
+    margin: auto;
 }
 .skills-links{
     display: flex;
@@ -238,16 +246,51 @@ nav .fa-solid{
     align-items: center;
     justify-content: center;
 }
-.skills-links a{
-    text-align: center;
-    margin: 2vw;
-}
+
 .skills-links img{
+    margin: 2vw;
+    padding: 1vw;
     max-width: 100px;
     width: 8vw;
     min-width: 40px;
+    border-radius: 20px;
+    background-color: #373947;
 }
-.row{
+.skills h3{
+    color: #b22022;
+}
+
+
+.projects{
+    text-align: center;
+    padding: 10% 1%;
+    margin: auto;
+    /* background-color: #212332; */
+    color: #e8e8e9;
+    width: auto;
+    background-image: linear-gradient(rgba(29, 29, 38, 0.7),rgba(29, 29, 38, 0.7)),url(https://wallpaperaccess.com/full/4490477.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.projects-col{
+    flex-basis: 30%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.projects-col img{
+    border-radius: 10px;
+    height: 18vw;
+    align-self: center;
+}
+
+.projects-col h3{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.projects-row{
     margin: 5%;
     display: flex;
     justify-content: space-between;
@@ -269,79 +312,55 @@ nav .fa-solid{
 .about-me-col:hover{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 } */
-@media(max-width: 700px){
-    .row{
-        flex-direction: column;
-    }
-}
 
 
 
-
-
-.projects{
-    margin: auto;
-    text-align: center;
-    padding: 120px 0px;
-    background-color: #222831;
-    color: white;
-    width: 100%;
-}
-.projects a{
-    color: white;
-}
-.projects-col{
-    flex-basis: 31%;
-    border-radius: 10px;
-    text-align: left;
-}
-.projects-col img{
-    border-radius: 10px;
-}
-
-.projects-col h3{
-    margin-top: 16px;
-    margin-bottom: 16px;
-    text-align: center;
-}
 .experience{
-    background-color: #E4F9F5;
-    padding: 100px 0px;
-    width: 100%;
+    background-color: #181820;
+    padding: 10% 18%;
+    margin: auto;
+    color: #eaeced;
+}
+.exp-row{
+    display: flex;
+    flex: 1;
+    padding: 2% 0%;
+    justify-content: space-between;
 }
 .experience h1{
     text-align: center;
+    color: #e77c7a;
 }
 .experience img{
     width: 10%;
+    min-width: 100px;
+    height: 10%;
+}
+.experience h4{
+    color: #b22022;
+    font-weight: 300;
 }
 
-.berg{
-    margin: 50px auto;
-    margin-bottom: 0px;
-    width: 80%;
-    background-image: url(images/berg.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 100px 0;
-}
 
 .footer{
-    width: 100%;
+    margin: auto;
     text-align: center;
-    padding: 30px 0;
-    padding-bottom: 100px;
+    padding-top: 10%;
+    padding-bottom: 10%;
     background-color: #222831;
-    color: white;
-}
-.footer a{
-    color: white;
+    background-image: linear-gradient(rgba(29, 29, 38, 0.7),rgba(29, 29, 38, 0.7)),url(https://wallpaperaccess.com/full/2825710.gif);
+    background-position: center center;
+    color: #e8e8e9;
 }
 .footer img {
-    width: 20px;
-    padding-right: 30px;
+    width: 1vw;
+    min-width: 20px;
+}
+.footer a{
+    color: #e8e8e9;
+}
+.footer h1{
+    font-weight: 700;
 }
 .contact-links{
     display: flex;
